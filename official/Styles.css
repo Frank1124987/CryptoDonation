@@ -1,10 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-body{
-    margin: 0 ;
-    font-family: sans-serif;
-}
+
 
 /* Navigation */
 .cover-background{
@@ -74,14 +68,7 @@ body{
     height: 15px;
 }
 
-/* Content */
-#content{
-    padding: 2% 5% 2% 5%;
-}
 
-.content-title{
-    color: black;
-}
 
 .items-container-nft{
     display: flex;
@@ -112,7 +99,6 @@ body{
 /* Content Donation Project */
 .items-container-project{
     display: flex;
-
     overflow-x: auto;
     flex-wrap: nowrap;
     

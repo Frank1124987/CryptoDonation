@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0 ;
+    font-family: sans-serif;
+}
+
+/* Navigation */
+.cover-background{
+    background-image: url("./assets/image/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.cover-background img{
+    width: 100%;
+    visibility: hidden;
+}
+
+.nav-bar{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 100%;
+    transform: translate(0, -100%);
+}
+
+
+#nav-title{
+    font-family: sans-serif;
+    color: white;
+    margin: 0.5%;
+    margin-left: 5%;
+}
+
+.nav-option-container{
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0.5%;
+    margin-right: 5%;
+    width: 40%;
+    height: 38px;
+}
+
+.nav-option{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 15px)/4);
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.nav-option:hover{
+    background-color: rgb(240, 240, 240);
+
+}
+
+.nav-option-seperation{
+    border-left: 1px solid gray;
+    margin: 2px;
+    height: 15px;
+}
+
+/* Content */
+#content{
+    padding: 2% 5% 2% 5%;
+}
+
+.content-title{
+    color: black;
+}
+
+.items-container-nft{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+/* Content NFT-list item */
+.NFT-item-info{
+    padding: 1% 2% 1% 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 20%;
+    cursor: pointer;
+
+    flex: 0 0 auto;
+}
+
+.NFT-item-info img{
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+/* Content Donation Project */
+.items-container-project{
+    display: flex;
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;
+}
+
+.items-container-project::-webkit-scrollbar {
+    display: none;
+}
+
+.Donation-project-info{
+    padding: 1% 2% 1% 0;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    cursor: pointer;
+
+    flex: 0 0 auto;
+}
+
+.Donation-project-info img{
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    margin-left: 0;
+}

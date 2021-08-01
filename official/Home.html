@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陽交大區塊鏈募資平台</title>
+    <link rel="stylesheet" href="Styles.css"></style>
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div class="cover-background">
+        <div class="nav-bar" >
+            <div id="nav-title">
+                <h1 style="font-size: 50px;">
+                    陽明交通大學
+                    </br>
+                    區塊鏈募資平台
+                </h1>
+            </div>
+            <div class="nav-option-container">
+                <div class="nav-option" onclick="window.location.href='Donation.html'" >
+                    我要捐款
+                </div>
+                <div class="nav-option-seperation"></div>
+                <div class="nav-option" onclick="window.location.href='Project.html'" >
+                    各項專案
+                </div>
+                <div class="nav-option-seperation"></div>
+                <div class="nav-option" onclick="window.location.href='DonationUsage.html'">
+                    捐款使用方向
+                </div>
+                <div class="nav-option-seperation"></div>
+                <div class="nav-option" onclick="window.location.href='AnnualReport.html'">
+                    年度報告
+                </div>      
+            </div>
+        </div>    
+        <img src="./assets/image/cover.jpg" >
+    </div>
+
+    <div id="content">
+        <div class="content-container nft" >
+            <div>
+                <h1 class="content-title">
+                    熱門NFT
+                </h1>
+            </div>
+            <div id="nft-items" class="items-container-nft">
+                <nft-item 
+                    v-for="nft_item_info in nft_all_info" 
+                    :key="nft_item_info.id"
+                    :info="nft_item_info">
+                </nft-item>   
+            </div>
+        </div>
+
+        <div class="content-container project" >
+            <div>
+                <h1 class="content-title">
+                    募款中專案
+                </h1>
+            </div>
+            <div id="donation-projects" class="items-container-project" >
+                <donation-project
+                    v-for="project_info in project_all_info"
+                    :key="project_info.id"
+                    :info="project_info">
+                </donation-project>
+            </div>
+        </div>
+
+
+        <div class="donation-usage"></div>
+    </div>
+
+    <!-- import app -->
+    <script src="C_NFT_list.js"></script>
+    <script src="C_Donation_project.js"></script>
+    <!-- mount app -->
+    <script>
+        const mounted_NFTItems = NFT_items.mount('#nft-items')
+        const mounted_DonationProjects = Donation_projects.mount("#donation-projects")
+    </script>
+</body>
+</html>
